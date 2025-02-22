@@ -13,13 +13,13 @@ const CustomFullNameTextFieldClient: TextFieldClientComponent = ({ path, field, 
   const { value, setValue } = useField({ path })
 
   // get the firstName and lastName field values from the form fields
-  const firstNameField = useFormFields(([{ firstName }]) => firstName?.value)
-  const lastNameField = useFormFields(([{ lastName }]) => lastName?.value)
+  const firstNameFieldValue = useFormFields(([{ firstName }]) => firstName?.value)
+  const lastNameFieldValue = useFormFields(([{ lastName }]) => lastName?.value)
 
   // Memoize the full name to avoid recalculations
   const fullName = useMemo(
-    () => `${firstNameField || ''} ${lastNameField || ''}`.trim(),
-    [firstNameField, lastNameField],
+    () => `${firstNameFieldValue || ''} ${lastNameFieldValue || ''}`.trim(),
+    [firstNameFieldValue, lastNameFieldValue],
   )
 
   // if the value of the field is not the same as the value of the firstName and lastName fields,

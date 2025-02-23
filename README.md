@@ -2,6 +2,7 @@
 
 This project demonstrates how to create a custom field in Payload CMS that automatically combines and synchronizes multiple field values.
 
+SEE VIDEO HERE - https://youtu.be/EX_DeZtuOqc
 ## Features
 
 ### Full Name Field Synchronization
